@@ -22,7 +22,6 @@ print('solution 1 total:', total)
 total_2 = 0
 
 def getFirstDigit(data_2, i, charlist, charvalue):
-    print('data_2_1:', data_2)
     for char in data_2[i]:
         charlist.append(char)
         charvalue = ''.join(charlist)
@@ -49,7 +48,6 @@ def getFirstDigit(data_2, i, charlist, charvalue):
         
 def getLastDigit(data_2, i, charlist, charvalue):
     charlist = []
-    print('data_2_2:', data_2)
     for char in reversed(data_2[i]):
         charlist.append(char)
         charvalue = ''.join(charlist)
@@ -84,11 +82,9 @@ with open("day-1/input.txt", 'r') as data_file:
             for i in range(len(data_2)):
                 numslist_2.append(getFirstDigit(data_2, i, charlist, charvalue))
                 numslist_2.append(getLastDigit(data_2, i, charlist, charvalue))
-                print('numslist_2:', numslist_2)
             first_digit_2 = numslist_2[0]
             last_digit_2 = numslist_2[1]
             temp_2 = int(str(first_digit_2) + str(last_digit_2))
-            print('temp_2:', temp_2)
             total_2 += temp_2
-            
+
 print('solution 2 total:', total_2)
